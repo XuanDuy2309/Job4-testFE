@@ -16,7 +16,7 @@ function Slide({
 
     const setIndexItems=(data)=>{
         let items =[];
-        for (let i=0;i<data.length-1;i++){
+        for (let i=0;i<data.length;i++){
             items.push(i);
         }
         setItems(items);
