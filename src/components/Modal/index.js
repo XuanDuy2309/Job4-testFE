@@ -4,7 +4,7 @@ import Styles from './Modal.model.scss'
 
 const cx = classNames.bind(Styles);
 
-function Modal({ isModalOpen, onClick,onClose }) {
+function Modal({ isModalOpen, click,onClose }) {
     if (isModalOpen !== true) {
         return null;
     }
@@ -14,8 +14,8 @@ function Modal({ isModalOpen, onClick,onClose }) {
                 <main className="modal-mainContents">
                     <span className="modalText">Delete this Object</span>
                     <div className="modal-button">
-                        <button onClick={onClose} type={"button"}>Close</button>
-                        <button onClick={onClick} type={"button"}>Delete</button>
+                        <button onClick={onClose} >Close</button>
+                        <button onClick={click} >Delete</button>
                     </div>
                 </main>
             </article>

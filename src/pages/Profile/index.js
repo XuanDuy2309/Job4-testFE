@@ -21,11 +21,13 @@ function Profile(props) {
     const [isShowForm,setIsShowForm] = useState(false);
     const [statusForm, setStatusForm] = useState('');
     const [valueEdit,setValueEdit] = useState([]);
-    const [isModalOpen, setIsModalOpen] = useState(false)
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [indexDelete, setIndexDelete] = useState('');
     const navigate = useNavigate();
 
-    const openModal = () => {
+    const openModal = (e) => {
         setIsModalOpen(true);
+        setIndexDelete(e);
     };
 
     const closeModal = () => {
@@ -35,7 +37,7 @@ function Profile(props) {
     const handleShowForm=(e)=>{
         if(isShowForm){
             setIsShowForm(!isShowForm);
-            window.location.reload();
+            loadData();
         } else {
             setStatusForm(e);
             setIsShowForm(!isShowForm);
@@ -131,6 +133,7 @@ function Profile(props) {
     }
 
     function handleChangeDelete(e) {
+        console.log(e);
         const token= JSON.parse(localStorage.getItem('token'));
         const request = {
             method: 'DELETE',
@@ -143,8 +146,30 @@ function Profile(props) {
             .then(res => res.text())
             .then(data => {
                 if (data){
-
+                    setIsModalOpen(false);
+                    loadData();
                 }
+            }).catch(fail=>console.log(fail));
+    }
+
+    function loadData(){
+        const token= JSON.parse(localStorage.getItem('token'));
+
+        const request = {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'authorization': 'Bearer '+ token.accessToken
+            },
+        };
+        fetch(`https://agiletech-test-api.zeabur.app/posts?page=${indexPage}`, request)
+            .then(res => res.json())
+            .then(data => {
+                if (data && data.posts){
+                    setData(data);
+                    setTotalPage(addTotal(data.total_page));
+                }
+
             }).catch(fail=>console.log(fail));
     }
 
@@ -176,25 +201,8 @@ function Profile(props) {
     }
 
     useEffect(()=>{
-        const token= JSON.parse(localStorage.getItem('token'));
-
-        const request = {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'authorization': 'Bearer '+ token.accessToken
-            },
-        };
-        fetch(`https://agiletech-test-api.zeabur.app/posts?page=${indexPage}`, request)
-            .then(res => res.json())
-            .then(data => {
-                if (data && data.posts && data.posts.length){
-                    setData(data);
-                    setTotalPage(addTotal(data.total_page));
-                }
-
-            }).catch(fail=>console.log(fail));
-    },[indexPage, statusDelete])
+        loadData();
+    },[indexPage])
     return (
         <div className="profile">
             <div className="sidebar">
@@ -241,20 +249,19 @@ function Profile(props) {
                             </thead>
                             <tbody>
                                 {
-                                    (data && data.posts) && data.posts.map(post => (
+                                    (data && data.posts) && data.posts.map((post, index) => (
                                         <tr>
-                                            <td key={post.id}>{post.id}</td>
+                                            <td key={index}>{post.id}</td>
                                             <td>{post.title}</td>
                                             <td>{post.description}</td>
                                             <td>{post.tags.join(', ')}</td>
                                             <td className="action-cell">
-                                                <button onClick={() => handleChangeEdit(post)}>
+                                                <button className="btn-action" onClick={() => handleChangeEdit(post)}>
                                                     <img src={images.iconEdit} alt=""/>
                                                 </button>
-                                                <button onClick={()=>openModal(post.id)}>
+                                                <button className="btn-action" onClick={()=>openModal(post.id)}>
                                                     <img src={images.iconDelete} alt=""/>
                                                 </button>
-                                                <Modal isModalOpen={isModalOpen} onClick={handleChangeDelete(post.id)} onClose={closeModal}/>
                                             </td>
                                         </tr>
                                     ))
@@ -309,7 +316,7 @@ function Profile(props) {
                     }
                 </div>
             </div>
-
+            <Modal isModalOpen={isModalOpen} click={()=>handleChangeDelete(indexDelete)} onClose={closeModal}/>
         </div>
     );
 }
