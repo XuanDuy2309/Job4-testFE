@@ -24,7 +24,11 @@
 }
 
 .item-avt {
-  height: 90px;
+  width: 260px;
+}
+
+.item-avt img {
+  width: 100%;
 }
 
 .item-content {
@@ -84,7 +88,7 @@
 
 .slide-btn{
   position: relative;
-  top:-208px;
+  top:-300px;
   padding: 0 24px;
   display: flex;
   justify-content: space-between;

@@ -17,7 +17,7 @@ function NotSignIn() {
                     <HeaderTop
                         isLogin={false}
                         isInLoginPage={false}
-                        href={(localStorage.getItem('accessToken')!='')?"/home":"/login"}
+                        href={(localStorage.getItem('accessToken')!=''||localStorage.getItem('accessToken')==undefined)?"/home":"/login"}
                     />
                     <div className="header-content">
                         <div className="content-title">
@@ -78,10 +78,7 @@ function NotSignIn() {
 
                     <div className="testi-slide">
                         <SlideShow
-                            avt={images.avtSlide}
-                            name="John Fang"
                             contact="wordfaang.com"
-                            about="Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla."
                             iconL={images.btnLeft}
                             iconR={images.btnRight}
                         />

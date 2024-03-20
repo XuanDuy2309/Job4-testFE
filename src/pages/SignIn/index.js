@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import classNames from "classnames/bind";
 import Styles from "./SignIn.model.scss";
 import HeaderTop from "../../components/HeaderTop";
@@ -9,6 +9,7 @@ const cx = classNames.bind(Styles);
 
 function SignIn(props) {
     const navigate = useNavigate();
+
 
     const handleClick = (event) => {
         event.preventDefault();
@@ -31,6 +32,8 @@ function SignIn(props) {
             }).catch(fail=>console.log(fail));
 
     };
+
+
     return (
         <div className="main">
             <div className="container">
