@@ -21,7 +21,6 @@ function Slide({
             return width;
         }
     }
-    console.log(getWidth());
 
 
     const setIndexItems=(data)=>{
@@ -33,12 +32,14 @@ function Slide({
     }
 
     const handleRightSlideShow = ()=> {
-        if (current == galleries.length - 1) {
-            setCurrent(0);
-            setX(0);
-        } else {
-            setCurrent((prevCurrent) => prevCurrent + 1);
-            setX((prevX) => prevX - getWidth());
+        if (galleries){
+            if (current == galleries.length - 1) {
+                setCurrent(0);
+                setX(0);
+            } else {
+                setCurrent((prevCurrent) => prevCurrent + 1);
+                setX((prevX) => prevX - getWidth());
+            }
         }
     }
 
