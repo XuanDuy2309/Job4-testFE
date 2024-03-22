@@ -13,6 +13,15 @@ function Slide({
     const [items,setItems] = useState([]);
     const [x, setX] = useState(0);
     const [galleries,setGalleries] = useState(null);
+    const item =document.getElementById('item-w');
+
+    function getWidth(){
+        if (item!=null&&item!=undefined){
+            const width = item.offsetWidth;
+            return width;
+        }
+    }
+    console.log(getWidth());
 
 
     const setIndexItems=(data)=>{
@@ -29,21 +38,23 @@ function Slide({
             setX(0);
         } else {
             setCurrent((prevCurrent) => prevCurrent + 1);
-            setX((prevX) => prevX - 932);
+            setX((prevX) => prevX - getWidth());
         }
     }
 
     const handleLeftSlideShow = ()=> {
         if (current == 0) {
             setCurrent(galleries.length-1);
-            setX(-932 * (galleries.length - 1));
+            setX( getWidth()*(-1)* (galleries.length - 1));
         } else {
             setCurrent((prevCurrent) => prevCurrent - 1);
-            setX((prevX) => prevX + 932);
+            setX((prevX) => prevX + getWidth());
         }
     }
 
     useEffect(() => {
+        const intervalId = setInterval(handleRightSlideShow, 5000);
+
         const request = {
             method: 'GET',
             headers: {
@@ -59,7 +70,6 @@ function Slide({
                 }
 
             }).catch(fail=>console.log(fail));
-        const intervalId = setInterval(handleRightSlideShow, 5000);
         return () => {
             clearInterval(intervalId);
         }
@@ -76,7 +86,7 @@ function Slide({
                     >
                         {
                             galleries && galleries.map((gallerie) => (
-                                <div className="item" key={gallerie.id}>
+                                <div className="item" key={gallerie.id} id="item-w">
                                     <div className="item-avt">
                                         <img src={gallerie.imageUrl} alt="" />
                                     </div>

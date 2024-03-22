@@ -11,7 +11,7 @@
 }
 
 .slide {
-  width: 932px;
+  width: 100%;
 
   overflow: hidden;
   border-radius: 20px;
@@ -20,11 +20,11 @@
 .slide-items {
   display: flex;
   transition: 0.5s;
-  width: 932px;
+  width: 100%;
 }
 
 .item {
-  width: 932px;
+
   flex-shrink: 0;
   background-color: #FFFFFF;
   border-radius: 20px;
