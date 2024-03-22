@@ -224,7 +224,7 @@ function Profile(props) {
                         <Input type="text"/>
                         <div className="tags">
                             <div className="input-tags">
-                                <input type="text" value={chooseTags.join(', ')}/>
+                                <input type="text" value={chooseTags}/>
                                 <img src={images.iconArrowDown} alt="" onClick={handleShowTag}/>
                             </div>
                             <div className={`list-tags ${showTags?'show-tags':''}`}>
@@ -259,7 +259,7 @@ function Profile(props) {
                                             <td key={index}>{post.id}</td>
                                             <td>{post.title}</td>
                                             <td>{post.description}</td>
-                                            <td>{post.tags.join(', ')}</td>
+                                            <td>{post.tags}</td>
                                             <td className="action-cell">
                                                 <button className="btn-action" onClick={() => handleChangeEdit(post)}>
                                                     <img src={images.iconEdit} alt=""/>
@@ -293,7 +293,7 @@ function Profile(props) {
                             <span>Tags</span>
                             <div className="tags">
                                 <div className="input-tags">
-                                    <input type="text" value={chooseTags.join(', ')} placeholder={valueEdit['tags']}/>
+                                    <input type="text" value={chooseTags} placeholder={valueEdit['tags']}/>
                                     <img src={images.iconArrowDown} alt="" onClick={handleShowTag}/>
                                 </div>
                                 <div className={`list-tags ${showTags?'show-tags':''}`}>
