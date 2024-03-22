@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import classNames from "classnames/bind";
 import Styles from "./SlideShow.model.scss";
 
@@ -13,6 +13,7 @@ function Slide({
     const [items,setItems] = useState([]);
     const [x, setX] = useState(0);
     const [galleries,setGalleries] = useState(null);
+
 
     const setIndexItems=(data)=>{
         let items =[];
@@ -65,38 +66,40 @@ function Slide({
     }, [current]);
     return (
         <div className="slide-container">
-            <div className="slide">
-                <div
-                    className="slide-items"
-                    style={{
-                        transform: `translateX(${x}px)`,
-                    }}
-                >
-                    {
-                        galleries && galleries.map((gallerie) => (
-                            <div className="item" key={gallerie.id}>
-                                <div className="item-avt">
-                                    <img src={gallerie.imageUrl} alt="" />
-                                </div>
+            <div className="wrapper-slide">
+                <div className="slide">
+                    <div
+                        className="slide-items"
+                        style={{
+                            transform: `translateX(${x}px)`,
+                        }}
+                    >
+                        {
+                            galleries && galleries.map((gallerie) => (
+                                <div className="item" key={gallerie.id}>
+                                    <div className="item-avt">
+                                        <img src={gallerie.imageUrl} alt="" />
+                                    </div>
 
-                                <div className="item-content">
-                                    <span className="item-name">John Fang</span>
-                                    <span className="item-contact">{contact}</span>
-                                    <span className="item-about">{gallerie.desctiption}</span>
+                                    <div className="item-content">
+                                        <span className="item-name">John Fang</span>
+                                        <span className="item-contact">{contact}</span>
+                                        <span className="item-about">{gallerie.desctiption}</span>
+                                    </div>
                                 </div>
-                            </div>
-                        ))
-                    }
+                            ))
+                        }
 
+
+                    </div>
 
                 </div>
-
             </div>
 
             <div className="slide-indexs">
                 {
                     items.map(item => (
-                        <div className={`index ${(current==item)?'index-focus':''}`}></div>
+                        <div className={`index ${(current==item)?'index-focus':''}`} key={item}></div>
                     ))
                 }
 

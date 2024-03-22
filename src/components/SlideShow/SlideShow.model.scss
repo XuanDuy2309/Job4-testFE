@@ -1,17 +1,26 @@
 .slide-container {
- width: 100%;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+}
+
+.wrapper-slide{
+  padding: 0 94px;
+  width: 100%;
 }
 
 .slide {
   width: 932px;
+
   overflow: hidden;
   border-radius: 20px;
-  margin: 0 auto;
 }
 
 .slide-items {
   display: flex;
   transition: 0.5s;
+  width: 932px;
 }
 
 .item {

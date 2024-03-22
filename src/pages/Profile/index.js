@@ -37,10 +37,12 @@ function Profile(props) {
     const handleShowForm=(e)=>{
         if(isShowForm){
             setIsShowForm(!isShowForm);
+            setShowTags(false);
             loadData();
         } else {
             setStatusForm(e);
             setIsShowForm(!isShowForm);
+            setShowTags(false);
             setChooseTags([]);
         }
 
@@ -108,6 +110,9 @@ function Profile(props) {
                 .then(data => {
                     if (data){
                         alert("Add new success");
+                        event.target[0].value='';
+                        event.target[1].value='';
+                        event.target[2].value='';
                     }
                 }).catch(fail=>console.log(fail));
         }else{
