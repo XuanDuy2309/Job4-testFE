@@ -1,13 +1,18 @@
-import Button from "./components/Button";
-import React, {useEffect} from 'react';
+
+import React from 'react';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import NotSignIn from "./pages/NotSignIn";
 import SignIn from "./pages/SignIn";
 import Profile from "./pages/Profile";
-import {BrowserRouter as Router, Routes, Route, useNavigate} from 'react-router-dom';
-import { publicRoutes} from "../src/routers";
+import HomeSignIn from "./pages/HomeSignIn";
 
 function App() {
-
+    const publicRoutes = [
+        { path: '/', component: NotSignIn},
+        { path: '/login', component: SignIn},
+        { path: '/profile', component: Profile},
+        { path: '/home',component:HomeSignIn},
+    ]
   return (
       <Router>
           <div className="App">
