@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Job4-testFE/static/css/main.c747a183.chunk.css",
-    "main.js": "/Job4-testFE/static/js/main.f90ff2c9.chunk.js",
-    "main.js.map": "/Job4-testFE/static/js/main.f90ff2c9.chunk.js.map",
+    "main.js": "/Job4-testFE/static/js/main.636ab410.chunk.js",
+    "main.js.map": "/Job4-testFE/static/js/main.636ab410.chunk.js.map",
     "runtime-main.js": "/Job4-testFE/static/js/runtime-main.caf0e0fb.js",
     "runtime-main.js.map": "/Job4-testFE/static/js/runtime-main.caf0e0fb.js.map",
     "static/js/2.3e84bb11.chunk.js": "/Job4-testFE/static/js/2.3e84bb11.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.964c6caf.chunk.js": "/Job4-testFE/static/js/3.964c6caf.chunk.js",
     "static/js/3.964c6caf.chunk.js.map": "/Job4-testFE/static/js/3.964c6caf.chunk.js.map",
     "index.html": "/Job4-testFE/index.html",
-    "precache-manifest.a0d3e785c6a3ea533ee6a5874a24a04c.js": "/Job4-testFE/precache-manifest.a0d3e785c6a3ea533ee6a5874a24a04c.js",
+    "precache-manifest.293d3adc5d3045816eefcc02382562d0.js": "/Job4-testFE/precache-manifest.293d3adc5d3045816eefcc02382562d0.js",
     "service-worker.js": "/Job4-testFE/service-worker.js",
     "static/css/main.c747a183.chunk.css.map": "/Job4-testFE/static/css/main.c747a183.chunk.css.map",
     "static/js/2.3e84bb11.chunk.js.LICENSE.txt": "/Job4-testFE/static/js/2.3e84bb11.chunk.js.LICENSE.txt",
@@ -38,6 +38,6 @@
     "static/js/runtime-main.caf0e0fb.js",
     "static/js/2.3e84bb11.chunk.js",
     "static/css/main.c747a183.chunk.css",
-    "static/js/main.f90ff2c9.chunk.js"
+    "static/js/main.636ab410.chunk.js"
   ]
 }
