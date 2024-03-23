@@ -7,26 +7,14 @@ import Profile from "./pages/Profile";
 import HomeSignIn from "./pages/HomeSignIn";
 
 function App() {
-    const publicRoutes = [
-        { path: '/', component: NotSignIn},
-        { path: '/login', component: SignIn},
-        { path: '/profile', component: Profile},
-        { path: '/home',component:HomeSignIn},
-    ]
   return (
       <Router>
           <div className="App">
               <Routes>
-                  {publicRoutes.map((route,index) => {
-                      const Page = route.component;
-                      return (
-                          <Route
-                              key={index}
-                              path={route.path}
-                              element={<Page/>}
-                          />
-                      )
-                  })}
+                  <Route path="/job4-testFE"  element={<NotSignIn />}/>
+                  <Route path="/login"  element={<NotSignIn />}/>
+                  <Route path="/profile"  element={<NotSignIn />}/>
+                  <Route path="/home"  element={<NotSignIn />}/>
               </Routes>
           </div>
       </Router>
