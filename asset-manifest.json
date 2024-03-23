@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/Job4-testFE/static/css/main.c747a183.chunk.css",
+    "main.js": "/Job4-testFE/static/js/main.f90ff2c9.chunk.js",
+    "main.js.map": "/Job4-testFE/static/js/main.f90ff2c9.chunk.js.map",
+    "runtime-main.js": "/Job4-testFE/static/js/runtime-main.caf0e0fb.js",
+    "runtime-main.js.map": "/Job4-testFE/static/js/runtime-main.caf0e0fb.js.map",
+    "static/js/2.3e84bb11.chunk.js": "/Job4-testFE/static/js/2.3e84bb11.chunk.js",
+    "static/js/2.3e84bb11.chunk.js.map": "/Job4-testFE/static/js/2.3e84bb11.chunk.js.map",
+    "static/js/3.964c6caf.chunk.js": "/Job4-testFE/static/js/3.964c6caf.chunk.js",
+    "static/js/3.964c6caf.chunk.js.map": "/Job4-testFE/static/js/3.964c6caf.chunk.js.map",
+    "index.html": "/Job4-testFE/index.html",
+    "precache-manifest.a0d3e785c6a3ea533ee6a5874a24a04c.js": "/Job4-testFE/precache-manifest.a0d3e785c6a3ea533ee6a5874a24a04c.js",
+    "service-worker.js": "/Job4-testFE/service-worker.js",
+    "static/css/main.c747a183.chunk.css.map": "/Job4-testFE/static/css/main.c747a183.chunk.css.map",
+    "static/js/2.3e84bb11.chunk.js.LICENSE.txt": "/Job4-testFE/static/js/2.3e84bb11.chunk.js.LICENSE.txt",
+    "static/media/access.svg": "/Job4-testFE/static/media/access.3bb40c83.svg",
+    "static/media/arrow-right-icon.svg": "/Job4-testFE/static/media/arrow-right-icon.a799d1d2.svg",
+    "static/media/arrowDown.svg": "/Job4-testFE/static/media/arrowDown.dc437df4.svg",
+    "static/media/avt-slide.svg": "/Job4-testFE/static/media/avt-slide.8b856daf.svg",
+    "static/media/bg-header.svg": "/Job4-testFE/static/media/bg-header.f2435ee6.svg",
+    "static/media/bgAccess.svg": "/Job4-testFE/static/media/bgAccess.2950ca14.svg",
+    "static/media/bgPrint.svg": "/Job4-testFE/static/media/bgPrint.490da0ef.svg",
+    "static/media/bgSecurity.svg": "/Job4-testFE/static/media/bgSecurity.b4f5ae50.svg",
+    "static/media/btn-left.svg": "/Job4-testFE/static/media/btn-left.828b606f.svg",
+    "static/media/btn-right.svg": "/Job4-testFE/static/media/btn-right.ebb9bddb.svg",
+    "static/media/fea-bgSearch.svg": "/Job4-testFE/static/media/fea-bgSearch.01e4faf5.svg",
+    "static/media/fea-search.svg": "/Job4-testFE/static/media/fea-search.66c50384.svg",
+    "static/media/icon-delete.svg": "/Job4-testFE/static/media/icon-delete.558e1dd4.svg",
+    "static/media/icon-edit.svg": "/Job4-testFE/static/media/icon-edit.a903ef36.svg",
+    "static/media/logo.svg": "/Job4-testFE/static/media/logo.20857160.svg",
+    "static/media/media.svg": "/Job4-testFE/static/media/media.0734a8e4.svg",
+    "static/media/message.svg": "/Job4-testFE/static/media/message.7d7c53ad.svg",
+    "static/media/print.svg": "/Job4-testFE/static/media/print.2b40d4b4.svg",
+    "static/media/security.svg": "/Job4-testFE/static/media/security.0a5d2c59.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.caf0e0fb.js",
+    "static/js/2.3e84bb11.chunk.js",
+    "static/css/main.c747a183.chunk.css",
+    "static/js/main.f90ff2c9.chunk.js"
+  ]
+}
