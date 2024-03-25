@@ -205,6 +205,10 @@ function Profile(props) {
             }).catch(fail=>console.log(fail));
     }
 
+    const handleGoToHome =()=>{
+        navigate("/home");
+    }
+
     useEffect(()=>{
         loadData();
     },[indexPage])
@@ -212,7 +216,7 @@ function Profile(props) {
         <div className="profile">
             <div className="sidebar">
                 <img src={images.logo} alt=""/>
-                <a href="/home">Ports</a>
+                <button onClick={handleGoToHome}>Ports</b>
                 <button onClick={handleLogout}>Logout</button>
 
             </div>
