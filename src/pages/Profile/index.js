@@ -200,7 +200,7 @@ function Profile(props) {
         fetch(`https://agiletech-test-api.zeabur.app/auth/logout`, request)
             .then(res => res.text())
             .then(data => {
-                navigate("/");
+                navigate("/job4-testFE");
                 localStorage.removeItem("token");
             }).catch(fail=>console.log(fail));
     }
