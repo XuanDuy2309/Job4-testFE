@@ -35,6 +35,10 @@ function HeaderTop({
             navigate("/login");
         }
     }
+
+    const handleGoToProfile =()=>{
+        navigate('/profile');
+    }
     return (
         <div className="header-top">
             <div className="logo">
@@ -45,7 +49,7 @@ function HeaderTop({
                 <Button
                     primary
                     disabled={!isLogin}
-                    href={"/profile"}
+                    onClick={handleGoToProfile}
                 >Profile</Button>
                 <Button
                     primary
