@@ -216,7 +216,7 @@ function Profile(props) {
         <div className="profile">
             <div className="sidebar">
                 <img src={images.logo} alt=""/>
-                <button onClick={handleGoToHome}>Ports</b>
+                <button onClick={handleGoToHome}>Ports</button>
                 <button onClick={handleLogout}>Logout</button>
 
             </div>
